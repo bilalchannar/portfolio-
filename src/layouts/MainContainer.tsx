@@ -1,4 +1,4 @@
-import { lazy, PropsWithChildren, Suspense, useEffect, useState } from "react";
+import { PropsWithChildren, useEffect, useState } from "react";
 import About from "../pages/About";
 import Education from "../pages/Education";
 import Contact from "../pages/Contact";
@@ -10,7 +10,12 @@ import Navbar from "../components/common/Navbar";
 import SocialIcons from "../components/common/SocialIcons";
 import WhatIDo from "../pages/WhatIDo";
 import Work from "../pages/Work";
-import setSplitText from "../utils/textSplitter";
+import { TextSplitter } from "../utils/textSplitter";
+
+const setSplitText = () => {
+  const elements = document.querySelectorAll(".landing-info h3, .landing-intro h2, .landing-intro h1");
+  new TextSplitter(Array.from(elements), { type: "chars,lines" });
+};
 
 const MainContainer = ({ children }: PropsWithChildren) => {
   const [isDesktopView, setIsDesktopView] = useState<boolean>(

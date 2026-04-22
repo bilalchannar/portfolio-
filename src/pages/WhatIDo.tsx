@@ -95,7 +95,7 @@ const WhatIDo = () => {
               </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
-                {config.skills.develop.tools.map((tool, index) => (
+                {config.skills.develop.tools.map((tool: any, index: number) => (
                   <div key={index} className="what-tags">{tool}</div>
                 ))}
               </div>
@@ -128,7 +128,7 @@ const WhatIDo = () => {
               </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
-                {config.skills.design.tools.map((tool, index) => (
+                {config.skills.design.tools.map((tool: any, index: number) => (
                   <div key={index} className="what-tags">{tool}</div>
                 ))}
               </div>

@@ -55,7 +55,7 @@ const Work = () => {
           My <span>Work</span>
         </h2>
         <div className="work-flex">
-          {config.projects.map((project, index) => (
+          {config.projects.map((project: any, index: number) => (
             <div className="work-box" key={project.id}>
               <div className="work-info">
                 <div className="work-title">

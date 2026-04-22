@@ -21,7 +21,7 @@ const Certifications = () => {
           <br /> Achievements
         </h2>
         <div className="certifications-list">
-          {config.certifications.map((cert) => (
+          {config.certifications.map((cert: any) => (
             <div 
               key={cert.id} 
               className="certification-card"
@@ -38,7 +38,7 @@ const Certifications = () => {
               </div>
               <p className="cert-description">{cert.description}</p>
               <div className="cert-skills">
-                {cert.skills.map((skill, index) => (
+                {cert.skills.map((skill: any, index: number) => (
                   <span key={index} className="cert-skill-tag">
                     {skill}
                   </span>
@@ -52,8 +52,8 @@ const Certifications = () => {
               <MdClose />
             </button>
             {config.certifications
-              .filter((cert) => cert.id === selectedCert)
-              .map((cert) => (
+              .filter((cert: any) => cert.id === selectedCert)
+              .map((cert: any) => (
                 <div key={cert.id} className="cert-modal-content">
                   <div className="cert-modal-icon">📜</div>
                   <h2>{cert.title}</h2>
@@ -65,7 +65,7 @@ const Certifications = () => {
                   <div className="cert-modal-skills">
                     <h4>Skills Demonstrated</h4>
                     <div className="skills-list">
-                      {cert.skills.map((skill, index) => (
+                      {cert.skills.map((skill: any, index: number) => (
                         <span key={index} className="skill-badge">
                           {skill}
                         </span>

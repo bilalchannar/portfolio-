@@ -13,10 +13,10 @@ const Skills = () => {
         <div className="skills-grid">
           {skillCategories.map(([key, category]) => (
             <div key={key} className="skill-category">
-              <h3>{category.title}</h3>
-              <p className="skill-description">{category.description}</p>
-              <div className="skill-tags">
-                {category.tools.map((skill, index) => (
+              <h3>{(category as any).title}</h3>
+              <p className="skill-description">{(category as any).description}</p>
+              <div className="skill-list">
+                {(category as any).tools.map((skill: any, index: number) => (
                   <span key={index} className="skill-tag">
                     {skill}
                   </span>

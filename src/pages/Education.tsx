@@ -13,7 +13,7 @@ const Education = () => {
           <div className="education-timeline">
             <div className="education-dot"></div>
           </div>
-          {config.education.map((edu, index) => (
+          {config.education.map((edu: any, _index: number) => (
             <div key={edu.id} className="education-info-box">
               <div className="education-info-in">
                 <div className="education-role">
