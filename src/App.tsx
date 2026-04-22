@@ -1,8 +1,8 @@
 import { lazy, Suspense } from "react";
-import "./App.css";
+import "./styles/App.css";
 
 const CharacterModel = lazy(() => import("./components/Character"));
-const MainContainer = lazy(() => import("./components/MainContainer"));
+const MainContainer = lazy(() => import("./layouts/MainContainer"));
 import { LoadingProvider } from "./context/LoadingProvider";
 
 const App = () => {

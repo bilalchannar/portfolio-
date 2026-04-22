@@ -1,0 +1,134 @@
+.education-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  place-items: center;
+  justify-content: center;
+  position: relative;
+  opacity: 1;
+  height: auto;
+  margin: auto;
+  margin-bottom: 0;
+  padding: 120px 0px;
+}
+
+.education-section h2 {
+  font-size: 70px;
+  line-height: 70px;
+  font-weight: 400;
+  text-align: center;
+  background: linear-gradient(0deg, #7f40ff, #ffffff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  margin-top: 50px;
+  margin-bottom: 90px;
+}
+
+.education-section h2 > span {
+  font-family: "Geist", sans-serif;
+  font-weight: 300;
+}
+
+.education-container {
+  width: 100%;
+  max-width: 800px;
+  padding: 0 30px;
+}
+
+.education-info {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 40px;
+}
+
+.education-timeline {
+  position: absolute;
+  left: -30px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, #7f40ff 0%, transparent 100%);
+}
+
+.education-dot {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background-color: #7f40ff;
+  border-radius: 50%;
+  left: -8px;
+  top: 0;
+  border: 3px solid var(--backgroundColor);
+}
+
+.education-info-box {
+  padding-left: 40px;
+  position: relative;
+}
+
+.education-info-box:first-child .education-dot {
+  top: 0;
+}
+
+.education-info-in {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.education-role h4 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+  color: #ffffff;
+}
+
+.education-role h5 {
+  font-size: 14px;
+  font-weight: 400;
+  margin: 8px 0 0 0;
+  color: #b0b0b0;
+  opacity: 0.8;
+}
+
+.education-info-in h3 {
+  font-size: 14px;
+  font-weight: 400;
+  color: #7f40ff;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.education-info-box p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #b0b0b0;
+  margin: 0;
+}
+
+.education-cgpa {
+  color: #7f40ff;
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  .education-section h2 {
+    font-size: 50px;
+    line-height: 50px;
+    margin-bottom: 60px;
+  }
+
+  .education-info-in {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .education-info-in h3 {
+    white-space: normal;
+  }
+}

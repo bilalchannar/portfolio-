@@ -3,7 +3,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import HoverLinks from "./HoverLinks";
 import { gsap } from "gsap";
 import Lenis from "lenis";
-import "./styles/Navbar.css";
+import "../styles/Navbar.css";
 
 gsap.registerPlugin(ScrollTrigger);
 export let lenis: Lenis | null = null;
@@ -67,14 +67,24 @@ const Navbar = () => {
     <>
       <div className="header">
         <a href="/#" className="navbar-title" data-cursor="disable">
-          Logo
+          <span style={{
+            fontSize: '20px',
+            fontWeight: '700',
+            background: 'linear-gradient(135deg, #7f40ff, #ffffff)',
+            backgroundClip: 'text',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            letterSpacing: '2px'
+          }}>
+            ⚡ BT
+          </span>
         </a>
         <a
-          href="mailto:example@mail.com"
+          href="mailto:bilalchannar01@gmail.com"
           className="navbar-connect"
           data-cursor="disable"
         >
-          example@mail.com
+          bilalchannar01@gmail.com
         </a>
         <ul>
           <li>

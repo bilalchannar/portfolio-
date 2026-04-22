@@ -1,5 +1,5 @@
-import "./styles/Work.css";
-import WorkImage from "./WorkImage";
+import "../components/styles/Work.css";
+import WorkImage from "../components/common/WorkImage";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect } from "react";
@@ -29,10 +29,10 @@ const Work = () => {
     let timeline = gsap.timeline({
       scrollTrigger: {
         trigger: ".work-section",
-        start: "top top",
+        start: "center bottom",
         end: `+=${translateX}`, // Use actual scroll width
         scrub: true,
-        pin: true,
+        pin: false,
         id: "work",
       },
     });
@@ -66,7 +66,8 @@ const Work = () => {
                     <p>{project.category}</p>
                   </div>
                 </div>
-                <h4>Tools and features</h4>
+                <p className="work-description">{project.description}</p>
+                <h4>Tech Stack</h4>
                 <p>{project.technologies}</p>
               </div>
               <WorkImage image={project.image} alt={project.title} />

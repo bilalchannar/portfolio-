@@ -1,5 +1,5 @@
-import { MdArrowOutward, MdCopyright } from "react-icons/md";
-import "./styles/Contact.css";
+import { MdArrowOutward, MdCopyright, MdDownload } from "react-icons/md";
+import "../components/styles/Contact.css";
 import { config } from "../config";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -60,12 +60,26 @@ const Contact = () => {
     <div className="contact-section section-container" id="contact">
       <div className="contact-container">
         <h3>{config.developer.fullName}</h3>
+        <a 
+          href={config.resume.downloadUrl} 
+          download={config.resume.fileName}
+          className="resume-download-btn"
+          data-cursor="disable"
+        >
+          <MdDownload /> Download Resume
+        </a>
         <div className="contact-flex">
           <div className="contact-box">
             <h4>Email</h4>
             <p>
               <a href={`mailto:${config.contact.email}`} data-cursor="disable">
                 {config.contact.email}
+              </a>
+            </p>
+            <h4>Phone</h4>
+            <p>
+              <a href={`tel:${config.contact.phone}`} data-cursor="disable">
+                {config.contact.phone}
               </a>
             </p>
             <h4>Location</h4>

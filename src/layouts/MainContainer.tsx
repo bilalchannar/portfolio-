@@ -1,16 +1,16 @@
 import { lazy, PropsWithChildren, Suspense, useEffect, useState } from "react";
-import About from "./About";
-import Career from "./Career";
-import Contact from "./Contact";
-import Cursor from "./Cursor";
-import Landing from "./Landing";
-import Navbar from "./Navbar";
-import SocialIcons from "./SocialIcons";
-import WhatIDo from "./WhatIDo";
-import Work from "./Work";
-import setSplitText from "./utils/splitText";
-
-const TechStack = lazy(() => import("./TechStack"));
+import About from "../pages/About";
+import Education from "../pages/Education";
+import Contact from "../pages/Contact";
+import Skills from "../pages/Skills";
+import Certifications from "../pages/Certifications";
+import Cursor from "../components/common/Cursor";
+import Landing from "../pages/Landing";
+import Navbar from "../components/common/Navbar";
+import SocialIcons from "../components/common/SocialIcons";
+import WhatIDo from "../pages/WhatIDo";
+import Work from "../pages/Work";
+import setSplitText from "../utils/textSplitter";
 
 const MainContainer = ({ children }: PropsWithChildren) => {
   const [isDesktopView, setIsDesktopView] = useState<boolean>(
@@ -39,11 +39,10 @@ const MainContainer = ({ children }: PropsWithChildren) => {
         <Landing>{!isDesktopView && children}</Landing>
         <About />
         <WhatIDo />
-        <Career />
+        <Education />
         <Work />
-        <Suspense fallback={<div>Loading....</div>}>
-          <TechStack />
-        </Suspense>
+        <Skills />
+        <Certifications />
         <Contact />
       </div>
     </div>
