@@ -121,6 +121,10 @@ a.contact-social {
   .contact-flex h4 {
     margin-top: 20px;
   }
+  .contact-section h3 {
+    font-size: 32px;
+    margin-bottom: 25px;
+  }
   .contact-section {
     margin-top: 50px;
     padding-bottom: 50px;
