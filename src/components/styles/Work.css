@@ -9,7 +9,8 @@
 }
 .work-section {
   transition: 0s;
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
   box-sizing: border-box;
   will-change: transform;
   position: relative;
@@ -20,16 +21,33 @@
   margin: auto;
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: auto;
   align-content: stretch;
 }
 .work-flex {
   width: 100%;
   display: flex;
-  height: 100%;
+  height: auto;
   margin-left: -80px;
   padding-right: 120px;
   position: relative;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+}
+
+.work-flex::-webkit-scrollbar {
+  height: 6px;
+}
+.work-flex::-webkit-scrollbar-track {
+  background: transparent;
+}
+.work-flex::-webkit-scrollbar-thumb {
+  background: #363636;
+  border-radius: 10px;
+}
+.work-flex::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 .work-box {
   padding: 80px;
@@ -48,13 +66,12 @@
 .work-flex::before,
 .work-flex::after {
   content: "";
-  width: calc(50000vw);
+  width: 100%;
   height: 1px;
   background-color: #363636;
   position: absolute;
-  left: 50%;
+  left: 0;
   top: 0;
-  transform: translateX(-50%);
 }
 .work-flex::after {
   top: 100%;
